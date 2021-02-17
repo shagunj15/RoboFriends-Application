@@ -1,0 +1,8 @@
+h1 {
+    font-family: "Trebuchet MS", sans-serif;
+    letter-spacing: -2px;
+    border-bottom: 2px solid whitesmoke;
+    text-transform: uppercase;
+    color: white;
+    font-size: 5em;
+}
