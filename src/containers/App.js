@@ -1,6 +1,6 @@
 import React , { Component } from 'react';
 import CardList from "../components/CardList";
-// import { robots } from "./robots";
+import ErrorBoundary from "../components/ErrorBoundary";
 import SearchBox from "../components/SearchBox";
 import './App.css';
 import Scroll from "../components/Scroll";
@@ -43,7 +43,9 @@ class App extends Component{
                     <h1>RoboFriends</h1>
                     <SearchBox searchChange = {this.onSearchChange}/>
                     <Scroll>
-                        <CardList robots = {askedRobot}/>
+                        <ErrorBoundary>
+                            <CardList robots = {askedRobot}/>
+                        </ErrorBoundary>
                     </Scroll>
                     {/* state becomes a prop cz robots is then passed down as a prop to CardList*/}
                 </div>
